@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "task-service"
+    },
+    {
+      "path": "todo-web"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.idea": true,
+      "**/.classpath": true,
+      "**/.project": true
+    }
+  }
+}
