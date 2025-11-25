@@ -47,3 +47,5 @@ Errores: `{timestamp, path, code, message, details[]}`.
 - Build: `./mvnw -DskipTests package`
 - Env: `PORT`, `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`, `CORS_ALLOWED_ORIGIN` (dominio Vercel).
 - Healthcheck: `/actuator/health`
+
+hola 
