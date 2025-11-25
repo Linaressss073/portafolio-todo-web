@@ -17,7 +17,7 @@ services:
     healthCheckPath: /actuator/health
 
   - name: todo-web
-    type: static
+    type: static_site
     rootDir: todo-web
     buildCommand: npm install && npm run build
     publishPath: dist/todo-web/browser
