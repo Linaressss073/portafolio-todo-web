@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+
+$theme: mat.define-theme((
+  color: (
+    primary: mat.$azure-palette,
+    tertiary: mat.$magenta-palette
+  ),
+  density: (
+    scale: 0
+  )
+));
+
+@include mat.core();
+@include mat.all-component-themes($theme);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.15), transparent 32%),
+    radial-gradient(circle at 80% 0%, rgba(45, 212, 191, 0.12), transparent 28%),
+    linear-gradient(135deg, #eef2ff, #f8fafc 45%, #ecfeff);
+  color: #000;
+  min-height: 100vh;
+}
+
+.error-snackbar {
+  background: #d32f2f;
+  color: #fff;
+}

@@ -1,0 +1,203 @@
+:host {
+  display: block;
+}
+
+.stat-card {
+  @apply rounded-2xl border border-slate-200/80 bg-white/80 p-4 shadow-sm backdrop-blur;
+}
+
+.stat-label {
+  @apply text-xs uppercase tracking-[0.2em] text-black/60;
+}
+
+.stat-value {
+  @apply text-2xl font-semibold text-black;
+}
+
+.stat-hint {
+  @apply text-sm text-black/60;
+}
+
+.list-card {
+  @apply space-y-4 rounded-3xl border border-slate-200 bg-white/80 p-5 shadow-xl backdrop-blur;
+}
+
+.eyebrow {
+  @apply text-xs uppercase tracking-[0.3em] text-black/60;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 via-indigo-500 to-emerald-400 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 transition hover:-translate-y-0.5 hover:brightness-110;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:bg-slate-50 hover:shadow;
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.action-btn:focus-visible,
+.filter-pill:focus-visible {
+  @apply outline-none ring-2 ring-offset-2 ring-sky-400 ring-offset-white;
+}
+
+.filters-bar {
+  @apply flex flex-col gap-3 md:flex-row md:items-end;
+}
+
+.search-field,
+.status-field {
+  @apply w-full md:max-w-xs;
+}
+
+.active-filters {
+  @apply flex flex-wrap gap-2;
+}
+
+.filter-pill {
+  @apply inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-black transition hover:bg-slate-50;
+}
+
+.skeleton {
+  @apply h-14 animate-pulse rounded-xl bg-slate-200/70;
+}
+
+.state-card {
+  @apply flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white/90 p-4 text-black shadow;
+  @apply md:flex-row md:items-center md:justify-between;
+}
+
+.state-card .state-title {
+  @apply text-lg font-semibold text-black;
+}
+
+.state-card .state-subtitle {
+  @apply text-sm text-black/70;
+}
+
+.state-card .state-icon {
+  @apply grid h-10 w-10 place-items-center rounded-full bg-slate-100 text-base font-semibold text-black;
+}
+
+.state-card.error .state-icon {
+  @apply bg-rose-100 text-rose-700;
+}
+
+.table-wrapper {
+  @apply overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl;
+}
+
+.table-scroller {
+  @apply max-h-[520px] overflow-auto;
+}
+
+.paginator {
+  @apply border-t border-slate-100;
+}
+
+.actions {
+  @apply flex items-center gap-2;
+
+  .action-btn {
+    @apply inline-flex items-center justify-center rounded-full p-2 text-black transition;
+  }
+
+  .action-btn.edit {
+    @apply bg-indigo-100 text-indigo-700 ring-1 ring-indigo-200 hover:bg-indigo-200;
+  }
+
+  .action-btn.delete {
+    @apply bg-rose-100 text-rose-700 ring-1 ring-rose-200 hover:bg-rose-200;
+  }
+}
+
+.mobile-card {
+  @apply space-y-3 rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm;
+
+  .label {
+    @apply text-xs uppercase tracking-wide text-black/60;
+  }
+}
+
+.status-chip {
+  @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold;
+
+  .dot {
+    @apply h-2 w-2 rounded-full;
+  }
+}
+
+.status-chip.open {
+  @apply bg-amber-200 text-black ring-1 ring-amber-300/70;
+
+  .dot {
+    @apply bg-amber-500;
+  }
+}
+
+.status-chip.progress {
+  @apply bg-sky-200 text-black ring-1 ring-sky-300/70;
+
+  .dot {
+    @apply bg-sky-500;
+  }
+}
+
+.status-chip.blocked {
+  @apply bg-rose-200 text-black ring-1 ring-rose-300/70;
+
+  .dot {
+    @apply bg-rose-500;
+  }
+}
+
+.status-chip.done {
+  @apply bg-emerald-200 text-black ring-1 ring-emerald-300/70;
+
+  .dot {
+    @apply bg-emerald-500;
+  }
+}
+
+:host ::ng-deep .mat-mdc-table {
+  @apply text-sm text-black;
+  background: transparent;
+}
+
+:host ::ng-deep .mat-mdc-header-row {
+  @apply bg-slate-50 text-black uppercase tracking-tight;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+:host ::ng-deep .mat-mdc-row:hover .mat-mdc-cell {
+  @apply bg-slate-50;
+}
+
+:host ::ng-deep .mat-mdc-cell,
+:host ::ng-deep .mat-mdc-header-cell {
+  @apply border-b border-slate-100 px-4;
+}
+
+:host ::ng-deep .mat-mdc-header-cell {
+  @apply font-semibold text-black;
+}
+
+:host ::ng-deep .mat-mdc-paginator {
+  @apply bg-white text-black;
+}
+
+:host ::ng-deep .mat-mdc-form-field-infix {
+  @apply text-black;
+}
+
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+  background: #f8fafc !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+:host ::ng-deep .mat-mdc-icon-button {
+  --mdc-icon-button-state-layer-size: 40px;
+}

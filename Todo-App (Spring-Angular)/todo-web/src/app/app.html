@@ -1,0 +1,39 @@
+<div class="relative min-h-screen overflow-hidden text-black">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute -left-10 top-0 h-64 w-64 rounded-full bg-sky-400/40 blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-emerald-300/35 blur-3xl"></div>
+    <div class="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-200/30 blur-3xl"></div>
+  </div>
+
+  <div class="relative mx-auto max-w-6xl px-6 pb-12 pt-10">
+    <header class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div class="space-y-3 text-black">
+        <div class="inline-flex items-center gap-2 rounded-full border border-slate-200/80 bg-white px-3 py-1 text-[11px] uppercase tracking-[0.25em] text-black shadow-sm">
+          <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Todo web
+        </div>
+        <div class="space-y-2">
+          <p class="text-sm text-black">Fullstack</p>
+          <h1 class="text-3xl font-semibold text-black md:text-4xl">Panel moderno de tareas</h1>
+          <p class="max-w-2xl text-base text-black">
+            Gestiona pendientes, aplica filtros y coordina estados con un look más claro y estructurado.
+          </p>
+        </div>
+      </div>
+      <div class="grid w-full max-w-md grid-cols-2 gap-3 md:w-auto">
+        <div class="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-md">
+          <p class="text-xs uppercase tracking-wide text-black">Frontend</p>
+          <p class="font-semibold text-black">Angular + Material</p>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-md">
+          <p class="text-xs uppercase tracking-wide text-black">Backend</p>
+          <p class="font-semibold text-black">Spring Boot</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="mt-10">
+      <router-outlet />
+    </section>
+  </div>
+</div>
